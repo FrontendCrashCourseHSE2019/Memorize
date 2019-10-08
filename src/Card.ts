@@ -1,6 +1,6 @@
 // require с raw-loader загружает содержимое файла card.html в виде EcmaScript-модуля, поэтому нам нужно поле .default
 // именно там будет строка с содержимым файла
-let fileContent = require("raw-loader!./card.html").default;
+let fileContent = require('raw-loader!./card.html').default;
 
 // создаём HTML Element с помощью JQuery из строки (из строки создаём один раз, дальше будем его клонировать)
 const html = $<Element>(fileContent);
@@ -29,16 +29,16 @@ export default class Card {
         this.element = html.clone();
 
         // находим в элементе переднюю часть карточки
-        this.cardFront = this.element.find(".card-front");
+        this.cardFront = this.element.find('.card-front');
 
         // находим в элементе заднюю часть карточки
-        this.cardBack = this.element.find(".card-back");
+        this.cardBack = this.element.find('.card-back');
 
         // прячем задник карты
         this.cardBack.hide();
 
         // добавляем иконку
-        this.cardBack.find("i.fab").addClass(icon);
+        this.cardBack.find('i.fab').addClass(icon);
     }
 
     /**
@@ -92,7 +92,7 @@ export default class Card {
      * Спрятать карту, когда она больше не нужна
      */
     remove() {
-        this.element.find(".flip-card").hide(100);
+        this.element.find('.flip-card').hide(100);
     }
 
 }

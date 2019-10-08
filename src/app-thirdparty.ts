@@ -3,7 +3,7 @@
 // для этого можно использовать expose-loader в вебпаке
 import 'expose-loader?$!jquery';
 // импорт скриптов
-import "bootstrap";
+import 'bootstrap';
 // и стилей из bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 // иконки из fontawesome

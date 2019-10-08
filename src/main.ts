@@ -1,7 +1,6 @@
 import './app-thirdparty';
 import './app.less';
-import "./Card";
-import Card from "./Card";
+import Card from './Card';
 
 /**
  * Перемешать элементы массива (можно не вчитываться)
@@ -17,9 +16,9 @@ function shuffle(array: string[]): string[] {
 $(() => {
 
     // список возможных иконок
-    let allIcons = ["fa-apple", "fa-docker", "fa-ebay", "fa-discord",
-        "fa-d-and-d", "fa-d-and-d-beyond", "fa-critical-role", "fa-github",
-        "fa-linux", "fa-jenkins", "fa-pied-piper-alt", "fa-yandex"];
+    let allIcons = ['fa-apple', 'fa-docker', 'fa-ebay', 'fa-discord',
+        'fa-d-and-d', 'fa-d-and-d-beyond', 'fa-critical-role', 'fa-github',
+        'fa-linux', 'fa-jenkins', 'fa-pied-piper-alt', 'fa-yandex'];
 
     // иконки, которые будут использоваться в игре
     let iconsForGame: string[] = [];
@@ -47,7 +46,7 @@ $(() => {
     iconsForGame = shuffle(iconsForGame);
 
     // получаем HTML-элемент, в который будем добавлять строки с картами
-    const gameContainer = $("#game-container");
+    const gameContainer = $('#game-container');
 
     // текущая добавляемая строка
     let row: JQuery<Element> = null;
@@ -102,9 +101,9 @@ $(() => {
                 lastPressedCard = card;
             }
 
-            if (cards == 0) {
+            if (cards === 0) {
                 // закончили карточки – закончилась игра
-                alert("You Won");
+                alert('You Won');
             }
 
         });
