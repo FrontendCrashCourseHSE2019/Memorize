@@ -1,6 +1,7 @@
 <html lang="ru">
 <head>
     <title>Memorize</title>
+    <script src="test.js"></script>
 </head>
 <body>
 
@@ -20,7 +21,20 @@
 <!--главная часть экрана-->
 <main class="py-md-3 pl-md-5">
     <!--контейнер-->
-    <div id="game-container" class="container"></div>
+    <div class="container">
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="item-input" placeholder="Дело...">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="add">Добавить</button>
+            </div>
+        </div>
+
+        <div id="items-container">
+
+        </div>
+
+    </div>
 </main>
 
 </body>
