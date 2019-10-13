@@ -11,13 +11,14 @@ $(() => {
 
     let itemInput = $("#item-input");
 
-    addButton.click(_ => {
+    addButton.click(() => {
 
         let text: string = itemInput.val() as string;
 
         let task = new Task(text, new Date());
         task.addMe(itemsContainer);
 
+        itemInput.val('');
     });
 
 });

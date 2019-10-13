@@ -1,4 +1,4 @@
-// require с raw-loader загружает содержимое файла card.html в виде EcmaScript-модуля, поэтому нам нужно поле .default
+// require с raw-loader загружает содержимое файла task.html в виде EcmaScript-модуля, поэтому нам нужно поле .default
 // именно там будет строка с содержимым файла
 let fileContent = require('raw-loader!./task.html').default;
 
@@ -19,11 +19,16 @@ export default class Task {
 
         this.element = html.clone();
 
-        this.element.find('.test').text(text);
+        this.element.find('.text').text(text);
+        this.element.find('.date').text(this.date.toLocaleString());
+
+        this.element.find('.close').click(() => {
+            this.element.remove();
+        });
     }
 
     public addMe(root: JQuery<Element>) {
-        root.append(this.element);
+        root.prepend(this.element);
     }
 
 }
