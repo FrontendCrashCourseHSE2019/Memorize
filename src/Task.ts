@@ -19,7 +19,7 @@ export default class Task {
 
         this.element = html.clone();
 
-        this.element.find('.test').text(text);
+        this.element.find('.text').text(text);
     }
 
     public addMe(root: JQuery<Element>) {
